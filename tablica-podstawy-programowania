@@ -1,0 +1,47 @@
+import java.util.*;
+
+public class Tablica {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		String input;											//zmienna do wprowadzania
+		String tablica[][] = 	{{"4", "3", "2", "1", "0", "1", "2", "3", "4"}, 	//tablica n x n
+								 {"3", "3", "2", "1", "0", "1", "2", "3", "3"}, 
+								 {"2", "2", "2", "1", "0", "1", "2", "2", "2"}, 
+								 {"1", "1", "1", "1", "0", "1", "1", "1", "1"},
+								 {"0", "0", "0", "0", "0", "0", "0", "0", "0"}, 
+								 {"1", "1", "1", "1", "0", "1", "1", "1", "1"}, 
+								 {"2", "2", "2", "1", "0", "1", "2", "2", "2"}, 
+								 {"3", "3", "2", "1", "0", "1", "2", "3", "3"},
+								 {"4", "3", "2", "1", "0", "1", "2", "3", "4"}};
+		
+	System.out.println("Wyświetlam tablice:");					//program najpierw wyświetla tablice
+	for (int j=0;j<tablica.length;j++) {						//pętla wyświetla po kolei każdą wartość komórki, odwzorowując ustawienie z zadania
+		System.out.println("");
+	for (int i=0;i<tablica.length;i++) {
+		System.out.print(tablica[j][i] + " ");
+	}
+	}
+	System.out.println("\nPodaj cyfrę z zakresu 0-4, którą mam podmienić na literę n:");		//prośba o podanie cyfry z zakreu 0-4 do podmianki (trochę ponad zadanie)
+	Scanner keyboard = new Scanner (System.in);
+	input = keyboard.nextLine();
+	
+	for (int j=0;j<tablica.length;j++) {						//pętla podmieniająca wskazaną wyżej liczbę na literę n
+	for (int i=0;i<tablica.length;i++) {
+		if (tablica[j][i].equals(input)) {						//jeżeli w programie nie ma być wyboru liczby, tylko jak w zadaniu n=4, to fragment   tablica[j][i].equals(input)  zastąpić  tablica[j][i]==4
+			tablica[j][i] = "n";
+		}
+	}
+	}
+	
+	System.out.println("Wyświetlam nową tablice:");					//program  wyświetla tablice z zamienioną wskazaną cyfrą na literę n
+	for (int j=0;j<tablica.length;j++) {
+		System.out.println("");
+	for (int i=0;i<tablica.length;i++) {
+		System.out.print(tablica[j][i] + " ");
+	}
+	}
+	
+	}
+
+}
